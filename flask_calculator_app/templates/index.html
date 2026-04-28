@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator App</title>
+</head>
+<body>
+
+    <h1>Flask Calculator Application</h1>
+
+    <form action="/calculate" method="POST">
+
+        <input type="number" name="num1" placeholder="Enter first number" required>
+        <input type="number" name="num2" placeholder="Enter second number" required>
+
+        <select name="operation">
+            <option value="add">Add</option>
+            <option value="sub">Subtract</option>
+            <option value="mul">Multiply</option>
+            <option value="div">Divide</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h2>Recent Calculations</h2>
+    <ul>
+        {% for item in history %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
