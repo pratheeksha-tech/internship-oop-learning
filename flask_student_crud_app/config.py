@@ -1,3 +1,6 @@
+import secrets
+
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///students.db'
+    SECRET_KEY = secrets.token_hex(16)
+    SQLALCHEMY_DATABASE_URI = "sqlite:///students.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
